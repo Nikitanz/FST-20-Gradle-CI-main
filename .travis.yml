@@ -1,10 +1,12 @@
+- brew install gradle
+
+before_install:
+    - gradle installWrapper
+    
 language: java
 
 git:
     quiet: false
-    
-before_install:
-    - gradle installWrapper
     
 job:
     include:

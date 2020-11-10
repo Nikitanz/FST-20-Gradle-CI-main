@@ -17,7 +17,6 @@ allow_failures:
     
 notifications:
 email:
-recipients:
 - nikita.stricker@gmx.de
 on_success: always
 on_failure: always 

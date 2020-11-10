@@ -1,24 +1,25 @@
-before_install:
-- gradle installWrapper
-    
 language: java
 
 git:
 quiet: false
     
+before_install:
+- gradle installWrapper   
+    
 jobs:
 include:
-- jdk: openjdk11
+-jdk: openjdk11
 os: linux
-- jdk: openjdk8
+-jdk: openjdk8
 os: osx
+  
 allow_failures:
-- os: osx
-    
+-os: osx
+
 notifications:
 email:
 - nikita.stricker@gmx.de
 on_success: always
-on_failure: always 
-    
+on_failure: always
+
 script: ./gradlew buildCore

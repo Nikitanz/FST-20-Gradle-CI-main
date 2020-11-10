@@ -2,9 +2,10 @@ language: java
 
 git:
 quiet: false
-    
+
 before_install:
-- gradle installWrapper   
+- brew install gradle
+- gradle installWrapper
     
 jobs:
 include:
@@ -12,7 +13,7 @@ include:
 os1: linux
 -jdk2: openjdk8
 os2: osx
-  
+
 allow_failures:
 os: osx
 

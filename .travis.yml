@@ -1,3 +1,5 @@
+- brew install gradle
+
 before_install:
 - gradle installWrapper
     

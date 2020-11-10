@@ -1,26 +1,26 @@
 language: java
 
 git:
-quiet: false
+  quiet: false
 
 before_install:
 - brew install gradle
 - gradle installWrapper
     
 jobs:
-include:
--jdk1: openjdk11
-os1: linux
--jdk2: openjdk8
-os2: osx
+  include:
+  - jdk: openjdk11
+    os: linux
+  - jdk: openjdk8
+    os: osx
 
-allow_failures:
-os: osx
+  allow_failures:
+  - os: osx
 
 notifications:
-email:
-- s4nistri@uni-trier.de
-on_success: always
-on_failure: always
+  email:
+  - s4nistri@uni-trier.de
+  on_success: always
+  on_failure: always
 
 script: ./gradlew buildCore

@@ -8,17 +8,17 @@ before_install:
     
 jobs:
 include:
--jdk: openjdk11
-os: linux
--jdk: openjdk8
-os: osx
+-jdk1: openjdk11
+os1: linux
+-jdk2: openjdk8
+os2: osx
   
 allow_failures:
--os: osx
+os: osx
 
 notifications:
 email:
-- nikita.stricker@gmx.de
+- s4nistri@uni-trier.de
 on_success: always
 on_failure: always
 

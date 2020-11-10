@@ -17,7 +17,7 @@ job:
     allow_failures:
     - os: osx
     
-Notifications:
+notifications:
     email:
     recipients:
     - nikita.stricker@gmx.de

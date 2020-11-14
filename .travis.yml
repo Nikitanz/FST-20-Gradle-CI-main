@@ -22,5 +22,4 @@ notifications:
   on_success: always
   on_failure: always
 
-
-script: ./gradlew runCore
+script: ./gradlew buildCore

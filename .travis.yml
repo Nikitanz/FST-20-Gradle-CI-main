@@ -13,6 +13,9 @@ jobs:
   - jdk: openjdk8
     os: osx
 
+  allow_failures:
+  - os: osx
+
 notifications:
   email:
   - s4nistri@uni-trier.de

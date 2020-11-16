@@ -13,7 +13,9 @@ jobs:
         with:
           java-version: 11
         
-      - name: Build with Gradle
-        run: | 
-          gradle installWrapper
-          gradle buildCore
+      - name: setup wrapper
+        run: gradle installWrapper
+      - name: give permission
+        run: chmod +x ./gradlew
+      - name: build
+        run: ./gradlew buildCore    

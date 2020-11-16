@@ -17,5 +17,14 @@ jobs:
         run: gradle installWrapper
       - name: give permission
         run: chmod +x ./gradlew
-      - name: build
-        run: ./gradlew buildCore    
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew build sonarqube --info

@@ -16,4 +16,4 @@ jobs:
       - name: Build with Gradle
         run: | 
           gradle installWrapper
-          gradle buildCore
+          ./gradlew buildCore

@@ -14,6 +14,6 @@ jobs:
           java-version: 11
         
       - name: Build with Gradle
-        run: 
-          gradle installWrapper
-          gradle buildCore
+        run: | 
+          ./gradlew installWrapper
+          ./gradlew buildCore
